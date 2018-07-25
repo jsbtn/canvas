@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,maximum-scale=1,user-scalable=no">
+		<title>canvas-+-title</title>
+		<script type="text/javascript" src="db/jq/jquery-1.9.1.min.js"></script>
+		<style type="text/css">
+			*{
+				margin: 0px;
+				padding: 0px;
+			}
+			html,body{
+				height: 100%;
+				width: 100%;
+				overflow: hidden;
+			}
+			#canvas{
+			    font-size:50px;
+			    color: #808080;  
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="canvas">
+			我就试试
+		</canvas>	
+
+		<script type="text/javascript">
+			var w = document.body.clientWidth;
+			var h = document.body.clientHeight;
+			console.log(w)
+			console.log(h)
+			function draw(){
+				var canvas = document.getElementById('canvas');
+				canvas.width = w ;
+				canvas.height = h ;
+				if (canvas.getContext){
+					var ctx = canvas.getContext('2d');
+			        // ctx.fillStyele= "rgba(200, 0, 0, 0.6)";
+			        // ctx.fillRect (10, 10, 55, 50);	
+			        // ctx.fillStyele="rgba(0,0,200,0.5)";
+			        // ctx.fillRect(30, 30, 55, 50) ;
+   					// 绘制矩形
+   					// ctx.fillRect(25,25,100,100);
+   					// ctx.clearRect(45,45,60,60);
+   					// ctx.strokeRect(50,50,50,50);
+   					// 路径
+   					// ctx.beginPath();
+   					// ctx.moveTo(75,50);
+   					// ctx.lineTo(100,75);
+   					// ctx.lineTo(100,25);
+   					// ctx.closePath();
+   					// ctx.stroke();
+   					//绘制元
+   					// ctx.beginPath();
+   					// ctx.arc(100,100,50,0,Math.PI,false);
+   					// ctx.fill();
+   					//贝塞尔曲线
+					// 二次贝塞尔曲线
+					// ctx.beginPath();
+					// ctx.moveTo(75,25);
+					// ctx.quadraticCurveTo(25,25,25,62.5); 
+					// ctx.quadraticCurveTo(25,100,50,100);
+					// ctx.quadraticCurveTo(50,120,30,125);
+					// ctx.quadraticCurveTo(60,120,65,100);
+					// ctx.quadraticCurveTo(125,100,125,62.5);
+					// ctx.quadraticCurveTo(125,25,75,25);
+					// ctx.stroke();
+					//三次贝塞尔曲线
+					// ctx.beginPath();
+					// ctx.moveTo(75,40);
+					// ctx.bezierCurveTo(75,37,70,25,50,25);
+					// ctx.bezierCurveTo(20,25,20,62.5,20,62.5);
+					// ctx.bezierCurveTo(20,80,40,102,75,120);
+					// ctx.bezierCurveTo(110,102,130,80,130,62.5);
+					// ctx.bezierCurveTo(130,62.5,130,25,100,25);
+					// ctx.bezierCurveTo(85,25,75,37,75,40);
+					// ctx.stroke();
+
+					 // ctx.beginPath();
+					 // ctx.arc(37,37,13,Math.PI/7,-Math.PI/7,false);
+					 // ctx.lineTo(31,37);
+					 // ctx.fill();
+					 // for(var i=0;i<8;i++){
+					 // ctx.fillRect(51+i*16,35,4,4);
+					 // }
+
+					 // for(i=0;i<6;i++){
+					 // ctx.fillRect(115,51+i*16,4,4);
+					 // }
+
+					 // for(i=0;i<8;i++){
+					 // ctx.fillRect(51+i*16,99,4,4);
+					 // }
+					//  var x = Math.floor(w/16);
+					//  var y = Math.floor(h/16);
+					//  for (var i = 0; i < x; i++) {
+					//  	for (var n = 0; n < y; n++) {
+					//  		ctx.fillStyle = "#808080";
+					// 		ctx.fillRect(16+i*16,16+n*16,2,2);
+					//  	}
+					//  } 
+					// roundedRect(ctx,12,12,150,150,15);
+					// function roundedRect(ctx,x,y,width,height,radius){
+					//   ctx.beginPath();
+					//   ctx.moveTo(x,y+radius);
+					//   ctx.lineTo(x,y+height-radius);
+					//   ctx.quadraticCurveTo(x,y+height,x+radius,y+height);
+					//   ctx.lineTo(x+width-radius,y+height);
+					//   ctx.quadraticCurveTo(x+width,y+height,x+width,y+height-radius);
+					//   ctx.lineTo(x+width,y+radius);
+					//   ctx.quadraticCurveTo(x+width,y,x+width-radius,y);
+					//   ctx.lineTo(x+radius,y);
+					//   ctx.quadraticCurveTo(x,y,x,y+radius);
+					//   ctx.stroke();
+					// }
+					  // for (var i=0;i<6;i++){
+					  //   for (var j=0;j<6;j++){
+					  //     ctx.fillStyle = 'rgb(' + Math.floor(255-42.5*i) + ',' + 
+					  //                      Math.floor(255-42.5*j) + ',0)';
+					  //     ctx.fillRect(j*25,i*25,25,25);
+					  //   }
+					  // }
+					// tt();
+					// function tt(){
+					// 	for (var i=0;i<6;i++){
+					// 	  for (var j=0;j<6;j++){
+					// 	    ctx.strokeStyle = 'rgb(0,' + Math.floor(255-42.5*i*Math.random()) + ',' + 
+					// 	                     Math.floor(255-42.5*j*Math.random()) + ')';
+					// 	    ctx.beginPath();
+					// 	    ctx.arc(12.5+j*25,12.5+i*25,10,0,Math.PI*2,true);
+					// 	    ctx.stroke();
+					// 	  }
+					// 	}
+					// 	setTimeout(function(){
+					// 		tt();
+					// 	},20)
+					// }
+					// 划线
+					// ctx.lineJoin= "round";
+					// ctx.lineCap = "round";
+					// ctx.lineWidth = 2;
+					// ctx.beginPath();
+					// ctx.moveTo(10,10);
+					// ctx.lineTo(10,100);
+					// ctx.stroke();
+					// 描绘文字
+					// ctx.font = "48px serif";
+					// ctx.textBaseline = "hanging";
+					// ctx.strokeText("Hello world", 0, 100);
+					// var text = ctx.measureText("Hello world"); // TextMetrics object
+					// console.log(text.width); // 16;
+					//使用图片
+					var imageObj = new Image();
+
+					imageObj.onload = function() {
+					ctx.drawImage(imageObj, 69, 50);
+					};
+					imageObj.src = 'https://www.html5canvastutorials.com/demos/assets/darth-vader.jpg';
+				}	
+			}
+			draw();
+		</script>
+	</body>
+</html>	 
